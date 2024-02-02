@@ -1,0 +1,2 @@
+# CloudposScannerDemo
+A comprehensive guide designed to demonstrate the utilization of Dialog mode for code scanning. This demo will walk you through the essential steps to configure parameters, and initiate synchronous or asynchronous scanning processes. Our aim is to ensure a seamless and productive scanning experience, tailored to meet your requirements and enhance your application's functionality.
