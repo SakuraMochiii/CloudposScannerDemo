@@ -75,7 +75,7 @@ public class ScanParameter implements Parcelable {
 		dest.writeBundle(bundle);
 	}
 
-	// Add a static member, named CREATOR, whicm implements the Parcelable.Creator interface
+	// Add a static member, named CREATOR, which implements the Parcelable.Creator interface
 	public static final Creator<ScanParameter> CREATOR = new Creator<ScanParameter>() {
 		@Override
 		public ScanParameter createFromParcel(Parcel source) {// Read data from Parcel and return RuleItem
