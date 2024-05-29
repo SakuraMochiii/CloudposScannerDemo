@@ -78,7 +78,7 @@ public class ScanParameter implements Parcelable {
 	// Add a static member, named CREATOR, which implements the Parcelable.Creator interface
 	public static final Creator<ScanParameter> CREATOR = new Creator<ScanParameter>() {
 		@Override
-		public ScanParameter createFromParcel(Parcel source) {// Read data from Parcel and return RuleItem
+		public ScanParameter createFromParcel(Parcel source) {// Read data from Parcel and return RuleItem object
 			return new ScanParameter(source);
 		}
 		@Override
