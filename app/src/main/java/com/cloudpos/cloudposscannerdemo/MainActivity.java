@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements IAIDLListener{
 
 
     /**
-     * 同步扫码
+     * Synchronized scanning
      */
     private void synchronizationScan() {
         ScanParameter parameter = new ScanParameter();
@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements IAIDLListener{
 
 
     /**
-     * 异步扫码
+     * Continuous scanning
      */
 
     private void continuousScan() {
@@ -140,7 +140,7 @@ public class MainActivity extends AppCompatActivity implements IAIDLListener{
     };
 
     /**
-     * 扫码窗口非全屏
+     * Not full screen scanning
      */
     private void noFullScreenScan() {
         ScanParameter parameter = new ScanParameter();
@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity implements IAIDLListener{
     }
 
     /**
-     * 扫码返回图片
+     * Scan and return image
      */
     private void returnBitmapScan() {
         ScanParameter parameter = new ScanParameter();
@@ -175,7 +175,7 @@ public class MainActivity extends AppCompatActivity implements IAIDLListener{
     }
 
     /**
-     * 去掉扫码框 全屏扫码
+     * Remove scanning box
      */
     private void noBoxScan() {
         ScanParameter parameter = new ScanParameter();
@@ -189,7 +189,7 @@ public class MainActivity extends AppCompatActivity implements IAIDLListener{
     }
 
     /**
-     * 只扫二维码和code128码
+     * Only scan qr code or code128
      */
     private void scanFormat() {
         ScanParameter parameter = new ScanParameter();
@@ -203,7 +203,7 @@ public class MainActivity extends AppCompatActivity implements IAIDLListener{
     }
 
     /**
-     * 自定义扫码框
+     * Custom scanning window
      */
     private void customScanWindow() {
         ScanParameter parameter = new ScanParameter();
@@ -211,7 +211,7 @@ public class MainActivity extends AppCompatActivity implements IAIDLListener{
         parameter.set(ScanParameter.KEY_SCAN_SECTION_CORNER_COLOR, Color.rgb(0x00, 0xFF, 0x00));
         parameter.set(ScanParameter.KEY_SCAN_SECTION_LINE_COLOR, Color.rgb(0x00, 0x00, 0xFF));
         parameter.set(ScanParameter.KEY_DISPLAY_SCAN_LINE, "no");
-        parameter.set(ScanParameter.KEY_SCAN_TIP_TEXT, "上海慧银");
+        parameter.set(ScanParameter.KEY_SCAN_TIP_TEXT, "WizarPOS Shanghai");
         parameter.set(ScanParameter.KEY_SCAN_TIP_TEXTCOLOR, Color.rgb(0xFF, 0x00, 0x00));
         parameter.set(ScanParameter.KEY_SCAN_TIP_TEXTMARGIN, 0);
         parameter.set(ScanParameter.KEY_SCAN_TIP_TEXTSIZE , 25);
@@ -223,7 +223,7 @@ public class MainActivity extends AppCompatActivity implements IAIDLListener{
         }
     }
 
-    private IScanService scanService; //扫码服务
+    private IScanService scanService; //Scanning service
     private ServiceConnection scanConn;
 
     @Override
