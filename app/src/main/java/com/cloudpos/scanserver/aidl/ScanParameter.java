@@ -25,7 +25,7 @@ public class ScanParameter implements Parcelable {
 	public static final String KEY_ENABLE_FLASH_ICON = "enable_flash_icon";
 	public static final String KEY_ENABLE_SWITCH_ICON = "enable_switch_icon";
 	public static final String KEY_ENABLE_INDICATOR_LIGHT = "enable_indicator_light";
-	public static final String KEY_DECODEFORMAT = "decodeformat";//为了和民生定义的接口统一，没有加'_'
+	public static final String KEY_DECODEFORMAT = "decodeformat";
 	
 	public static final String KEY_DECODER_MODE = "decoder_mode";
 	public static final String KEY_ENABLE_RETURN_IMAGE = "enable_return_image";
@@ -69,16 +69,16 @@ public class ScanParameter implements Parcelable {
 		return 0;
 	}
 
-	// 把javanbean中的数据写到Parcel
+	// Write data in javanbean to Parcel
 	@Override
 	public void writeToParcel(Parcel dest, int flags) {
 		dest.writeBundle(bundle);
 	}
 
-	// 添加一个静态成员,名为CREATOR,该对象实现了Parcelable.Creator接口
+	// Add a static member, named CREATOR, which implements the Parcelable.Creator interface
 	public static final Creator<ScanParameter> CREATOR = new Creator<ScanParameter>() {
 		@Override
-		public ScanParameter createFromParcel(Parcel source) {// 从Parcel中读取数据，返回RuleItem对象
+		public ScanParameter createFromParcel(Parcel source) {// Read data from Parcel and return RuleItem object
 			return new ScanParameter(source);
 		}
 		@Override

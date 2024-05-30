@@ -23,13 +23,8 @@ public class ListViewAdapter extends BaseAdapter {
         mContext = context;
         Locale locale = context.getResources().getConfiguration().locale;
         String language = locale.getLanguage();
-        if (language.endsWith("zh")) {
-            data = new String[]{"同步扫码", "异步扫码", "扫码窗口非全屏", "扫码返回图片", "去掉扫码框,全屏扫码",
-                    "只扫二维码和Code128码", "自定义扫码框"};
-        } else {
-            data = new String[]{"Synchronous Scan", "Asynchronous Scan", "Not full screen", "Return bitmap", "full screen",
+        data = new String[]{"Synchronous Scan", "Asynchronous Scan", "Not full screen", "Return bitmap", "full screen",
                     "only QR or code128", "custom window"};
-        }
     }
 
     @Override

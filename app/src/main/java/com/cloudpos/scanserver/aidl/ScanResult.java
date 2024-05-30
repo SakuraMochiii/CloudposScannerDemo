@@ -106,10 +106,10 @@ public class ScanResult implements Parcelable {
 		}
 	}
 	
-	// 添加一个静态成员,名为CREATOR,该对象实现了Parcelable.Creator接口
+	// Add a static member, named CREATOR, which implements the Parcelable.Creator interface
 	public static final Creator<ScanResult> CREATOR = new Creator<ScanResult>() {
 		@Override
-		public ScanResult createFromParcel(Parcel source) {// 从Parcel中读取数据，返回RuleItem对象
+		public ScanResult createFromParcel(Parcel source) {// Read data from Parcel and return RuleItem object
 			return new ScanResult(source);
 		}
 		@Override
@@ -126,11 +126,11 @@ public class ScanResult implements Parcelable {
 	
 	private byte[] convertBitmap2Buffer(Bitmap bitmap){
 		 byte[] result = null;
-		 ByteArrayOutputStream output = new ByteArrayOutputStream();//初始化一个流对象
+		 ByteArrayOutputStream output = new ByteArrayOutputStream();//Initialize a stream object
        try {
-   		bitmap.compress(CompressFormat.PNG, 100, output);//把bitmap100%高质量压缩 到 output对象里
-   		bitmap.recycle();//自由选择是否进行回收
-           result = output.toByteArray();//转换成功了
+   		bitmap.compress(CompressFormat.PNG, 100, output);//Add bitmap100% high quality compression to output object
+   		bitmap.recycle();//Freely choose whether to recycle
+           result = output.toByteArray();//Conversion success
        } catch (Exception e) {
            e.printStackTrace();
        } finally{
